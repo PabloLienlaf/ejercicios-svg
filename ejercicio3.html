@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 3 SVG</title>
+  <style media="screen" type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: sans-serif;
+    background-color: #56ade5;
+  }
+  .sol img {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    height: 25%;
+    width: auto;
+    -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-appear;
+      animation-name: slowly-appear;
+    opacity: 0;
+  }
+  .texto {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    padding-right: 10%;
+    color: #fff;
+    z-index: 10;
+    -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-appear-2;
+      animation-name: slowly-appear-2;
+    opacity: 0;
+  }
+  .arena {
+    background-color: #fff8da;
+    height: 30vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+  }
+  .chica img {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    height: 20%;
+    width: auto;
+    z-index: 9;
+  }
+  .balon img {
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    height: 15%;
+    width: auto;
+    -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    -webkit-animation-name: move-left;
+      animation-name: move-left;
+    opacity: 0;
+  }
+  .quitasol img {
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+    height: 20%;
+    z-index: -8;
+    -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    -webkit-animation-name: move-right;
+      animation-name: move-right;
+    opacity: 0;
+  }
+  .palmera img {
+    position: absolute;
+    height: 20%;
+    width: auto;
+    right: 40%;
+    bottom: 20%;
+    z-index: -9;
+    -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    -webkit-animation-name: slowly-appear;
+      animation-name: slowly-appear;
+    opacity: 0;
+  }
+
+  /* ANIMACIONES */
+  @-webkit-keyframes move-right {
+    0% { opacity: 0;}
+    20% { transform: translate(80%); opacity: 1;}
+    100% { transform: translate(80%); opacity: 1;}
+  }
+        @keyframes move-right {
+          0% { opacity: 0;}
+          20% { transform: translate(80%); opacity: 1;}
+          100% { transform: translate(80%); opacity: 1;}
+        }
+  @-webkit-keyframes move-left {
+    0% { opacity: 0;}
+    20% { transform: translate(-250%); opacity: 1;}
+    100% { transform: translate(-250%); opacity: 1;}
+  }
+        @keyframes move-left {
+          0% { opacity: 0;}
+          20% { transform: translate(-250%); opacity: 1;}
+          100% { transform: translate(-250%); opacity: 1;}
+        }
+  @-webkit-keyframes appear {
+    0% { display: none;}
+    100% { display: block;}
+  }
+        @keyframes appear {
+          0% { display: none;}
+          100% { display: block;}
+        }
+  @-webkit-keyframes slowly-appear {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+        @keyframes slowly-appear {
+          0% { opacity: 0;}
+          100% { opacity: 1;}
+        }
+  @-webkit-keyframes slowly-appear-2 {
+    0% { opacity: 0;}
+    30% { opacity: 1;}
+    100% { opacity: 1;}
+  }
+        @keyframes slowly-appear-2 {
+          0% { opacity: 0;}
+          30% { opacity: 1;}
+          100% { opacity: 1;}
+        }
+
+  </style>
+</head>
+<body>
+  <div class="sol"><img src="assets/ejercicio-3_sun.svg" alt="Sol"></div>
+  <div class="texto">
+    <h1>Vive el verano</h1>
+    <p>Con la protección del bloqueador solar número 1 de Chile podrás tener un verano protegido junto a toda tu familia</p>
+  </div>
+  <div class="arena"></div>
+  <div class="chica"><img src="assets/ejercicio-3_people.svg" alt="Chica"></div>
+  <div class="balon"><img src="assets/ejercicio-3_beach-ball.svg" alt="Pelota de playa"></div>
+  <div class="quitasol"><img src="assets/ejercicio-3_sun-umbrella.svg" alt="Quitasol"></div>
+  <div class="palmera"><img src="assets/ejercicio-3_palm-tree.svg" alt="Palmera"></div>
+</body>
+</html>
